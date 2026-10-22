@@ -1,0 +1,157 @@
+---
+title: Core Concepts
+description: Learn the foundational ideas behind this documentation system, including how pages, sections, and workflows fit together. This page helps contributors stay consistent as the documentation grows.
+---
+
+## Overview
+
+This page gives you a practical model for organizing documentation in the Karthick K starter kit. You can use it to define page structure, assign ownership, and keep content easy to review as your project grows.
+
+The examples below are intentionally generic so you can adapt them to your own product, team, and publishing workflow. The goal is consistency, not rigid structure.
+
+<Callout kind="info">
+This is a starter kit template. Replace the sample page names, roles, and workflows with the conventions your team actually uses.
+</Callout>
+
+## Page hierarchy and structure
+
+A good documentation system starts with a clear hierarchy. You should keep broad topics at the top, then split them into focused pages and sections. This makes it easier for readers to scan content and for contributors to decide where new material belongs.
+
+<Columns cols={2}>
+  <Card title="Top-level pages" icon="book-open" href="/introduction">
+    Use these for major ideas, onboarding content, and the main entry points into the docs.
+  </Card>
+  <Card title="Focused guides" icon="chevron-right" href="/quickstart">
+    Use these for step-by-step tasks, setup instructions, and product-specific workflows.
+  </Card>
+  <Card title="Reference content" icon="code" href="/authentication">
+    Use these for precise definitions, options, and technical behavior.
+  </Card>
+  <Card title="Release notes" icon="check-circle" href="/changelog">
+    Use these for version history, changes, and updates over time.
+  </Card>
+</Columns>
+
+### Suggested structure
+
+| Level | Purpose | Example |
+|------|------|------|
+| Page | Primary topic or workflow | Getting started |
+| Section | Group of related ideas | Setup, usage, troubleshooting |
+| Subsection | Detail within a section | Configuration options |
+| Note | Extra guidance or caution | Migration tip |
+
+A simple hierarchy helps readers understand where they are and what to read next. It also helps you avoid repeating the same content across multiple pages.
+
+## Content ownership and roles
+
+Documentation works best when each page has a clear owner. You do not need a large process to start; you only need to know who writes, who reviews, and who approves changes.
+
+<Tabs>
+  <Tab title="Writer" icon="pen-tool">
+    The writer drafts the page, updates examples, and keeps the language clear and consistent.
+
+    Writers should also check that links work, code samples run, and terms are defined the first time they appear.
+  </Tab>
+  <Tab title="Reviewer" icon="shield">
+    The reviewer checks accuracy, tone, and structure.
+
+    Reviewers focus on whether the content is complete, whether the steps make sense, and whether the page follows team conventions.
+  </Tab>
+  <Tab title="Approver" icon="check-circle">
+    The approver gives the final sign-off before publishing.
+
+    This role is useful when content affects onboarding, support, security, or product behavior.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+If your team is small, one person can own multiple roles. The important part is that someone is always responsible for keeping the page current.
+</Callout>
+
+## Drafting and review workflow
+
+A lightweight workflow helps you move from ideas to published pages without losing quality. You can keep it simple and still make it effective.
+
+<Steps>
+  <Step title="Plan the page" icon="clipboard-list">
+    Decide what the page should teach and who it is for. Write the main sections before you draft the content.
+  </Step>
+  <Step title="Write the first draft" icon="pencil">
+    Add plain language, realistic examples, and short explanations. Keep each section focused on one idea.
+  </Step>
+  <Step title="Review for accuracy" icon="search">
+    Check that examples match the intended workflow and that terminology is consistent across the page.
+  </Step>
+  <Step title="Polish and publish" icon="rocket">
+    Tighten the wording, fix formatting, and publish only after the page is easy to scan.
+  </Step>
+</Steps>
+
+### Example review checklist
+
+- Does the page answer one clear question?
+- Are the examples realistic and reusable?
+- Do section headings follow a logical order?
+- Is the content written for the reader, not for internal notes?
+- Have you removed anything outdated or duplicated?
+
+## Reusable documentation patterns
+
+Reusable patterns save time and help readers recognize familiar structures. They also make future pages easier to write because you are not starting from scratch every time.
+
+<CodeGroup tabs="Markdown,JSON">
+  ```markdown
+  ## Feature overview
+
+  Explain what the feature does in one short paragraph.
+
+  ### How it works
+
+  Use a short list to explain the main steps.
+
+  ### Examples
+
+  Show one realistic example with the expected result.
+  ```
+
+  ```json
+  {
+    "page": "feature-overview",
+    "owner": "documentation-team",
+    "status": "draft",
+    "updatedAt": "2026-10-22"
+  }
+  ```
+</CodeGroup>
+
+You can reuse this structure for guides, policies, and reference pages. When you do, keep the headings consistent so readers know what to expect from page to page.
+
+## Common mistakes to avoid
+
+<Expandable title="See common mistakes" default-open="false">
+  
+- Writing a page before deciding its purpose
+- Mixing several unrelated topics in one section
+- Using different terms for the same concept
+- Adding examples that are too vague to follow
+- Skipping review because the page feels small
+  
+</Expandable>
+
+## Next steps
+
+Once you understand these core concepts, you can use them to build a predictable documentation system. Start with one page, define its owner, and apply the same structure to the next page you create.
+
+<Columns cols={2}>
+  <Card title="Start with the introduction" icon="arrow-right" href="/introduction">
+    Learn how the starter kit presents your docs landing page.
+  </Card>
+  <Card title="Move into setup" icon="settings" href="/quickstart">
+    See how to turn these concepts into a working documentation flow.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+The future of building happens together. Use this template as a shared starting point, then shape it around your team’s real workflow.
+</Callout>

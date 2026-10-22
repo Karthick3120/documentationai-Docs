@@ -1,0 +1,195 @@
+---
+title: Changelog
+description: Track recent updates, additions, and improvements to the documentation starter kit. Review what changed and how those changes affect contributors and readers.
+---
+
+## Overview
+
+This changelog tracks recent updates to the Karthick K documentation starter kit. Use it to understand what changed, why it changed, and how you can adapt the template for your own project.
+
+This is a starter kit template, so the entries below describe generic documentation improvements that you can customize for your own product, team, or release process.
+
+<Callout kind="info">
+
+The future of building happens together. Use this page as a starting point, then replace the sample entries with your own release history.
+
+</Callout>
+
+## Recent Updates
+
+<Update label="2026-10-18" description="v1.4.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added a clearer content structure for starter kit pages so you can organize documentation faster.
+- Introduced reusable page patterns for overview, setup, and reference content.
+- Added a sample changelog format that you can extend with your own release notes.
+
+## Improvements
+
+- Refined headings, spacing, and section flow to make pages easier to scan.
+- Updated example content to better support self-contained documentation pages.
+- Improved consistency across code examples and explanatory text.
+
+## Bug Fixes
+
+- Fixed inconsistent phrasing in template sections.
+- Corrected sample formatting so the page renders cleanly in MDX.
+
+</Update>
+
+<Update label="2026-09-02" description="v1.3.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added more complete examples for documentation contributors who need a quick starting point.
+- Expanded the template with clearer guidance for writing maintainable docs.
+- Added sample patterns you can reuse for future product notes.
+
+## Improvements
+
+- Simplified the language so the template works well for multiple teams.
+- Improved readability by shortening long paragraphs and grouping related ideas.
+- Strengthened the documentation flow from introduction to updates.
+
+## Bug Fixes
+
+- Resolved heading hierarchy issues in the starter content.
+- Fixed formatting in list examples and component usage notes.
+
+</Update>
+
+<Update label="2026-07-21" description="v1.2.0" tags={["improvement", "bugfix"]}>
+
+## New Features
+
+- Added a version history section for recent template changes.
+- Introduced more realistic content examples for documentation maintenance.
+- Added guidance that helps you tailor the starter kit to your product.
+
+## Improvements
+
+- Updated the page tone to be more direct and contributor-friendly.
+- Improved the sample release notes so they read like real documentation.
+- Clarified that this page is generic and intended for customization.
+
+## Bug Fixes
+
+- Fixed sample references that were too vague for practical use.
+- Corrected formatting issues in the example markdown structure.
+
+</Update>
+
+## What Changed and Why
+
+The latest template updates focus on clarity, structure, and ease of customization. You should now find it easier to replace sample content with your own product details without rewriting the whole page.
+
+### Structure Changes
+
+The page layout now separates version history, content improvements, and template guidance. That makes it easier to maintain the changelog as your documentation grows.
+
+### Content Improvements
+
+The examples now use more realistic language and a consistent tone. This helps you create release notes that feel useful to contributors and readers instead of sounding like placeholder text.
+
+### Contributor Benefits
+
+If you manage documentation with a team, the improved structure gives you a repeatable format for tracking updates. You can add each release in chronological order and keep the notes easy to scan.
+
+## How to Use This Page
+
+<Steps>
+  <Step title="Review the latest entry">
+    Read the most recent update first so you understand the current state of the template.
+  </Step>
+  <Step title="Replace sample dates">
+    Swap the example release dates with your own version history and release cadence.
+  </Step>
+  <Step title="Edit the sections">
+    Keep the same section names or rename them to match your workflow, such as release notes, fixes, or improvements.
+  </Step>
+  <Step title="Link to related docs">
+    Connect this page to your setup guide, contribution guide, or content style guide so readers can move through the docs easily.
+  </Step>
+</Steps>
+
+## Example Release Workflow
+
+<CodeGroup tabs="Markdown,JSON" show-lines={true}>
+  ```markdown
+  <Update label="2026-11-01" description="v1.5.0" tags={["feature", "improvement"]}>
+
+  ## New Features
+
+  - Added a new docs navigation layout.
+  - Expanded example content for onboarding contributors.
+
+  ## Improvements
+
+  - Improved page consistency across sections.
+  - Updated changelog wording for clarity.
+
+  </Update>
+  ```
+
+  ```json
+  {
+    "releaseDate": "2026-11-01",
+    "version": "v1.5.0",
+    "tags": ["feature", "improvement"],
+    "sections": ["New Features", "Improvements"]
+  }
+  ```
+</CodeGroup>
+
+## Recommended Maintenance Pattern
+
+<Tabs>
+  <Tab title="Weekly" icon="calendar">
+    
+    Add small improvements, minor fixes, and editorial updates as you make them.
+
+  </Tab>
+  <Tab title="Monthly" icon="book-open">
+    
+    Group related documentation changes into one release note so readers can see the bigger picture.
+
+  </Tab>
+  <Tab title="Per Release" icon="rocket">
+    
+    Record each product or documentation release with version numbers, dates, and short summaries.
+
+  </Tab>
+</Tabs>
+
+## Quick Reference
+
+<Columns cols={3}>
+  <Card title="Version History" icon="bar-chart" href="#recent-updates">
+    
+    Keep a chronological record of changes so readers can trace documentation updates over time.
+
+  </Card>
+  <Card title="Template Notes" icon="book-open" href="#what-changed-and-why">
+    
+    Explain how the starter kit works and where contributors should customize it.
+
+  </Card>
+  <Card title="Maintenance Flow" icon="settings" href="#how-to-use-this-page">
+    
+    Use a repeatable process to add new updates without rewriting the page structure.
+
+  </Card>
+</Columns>
+
+## Notes for Customization
+
+You should replace the sample product references, release dates, and descriptions with your own content. Keep the same overall structure if you want a consistent changelog that is easy for your team to maintain.
+
+If you need a simpler format, remove older entries and keep only the most recent releases. If you need a longer history, continue adding new `<Update>` entries at the top of the page.
+
+<Callout kind="tip">
+
+For best results, write each release note in plain language and focus on what changed for readers, contributors, and maintainers.
+
+</Callout>

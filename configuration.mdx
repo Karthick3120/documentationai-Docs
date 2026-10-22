@@ -1,0 +1,289 @@
+---
+title: Configuration
+description: Customize the documentation starter kit to match your project’s needs, including branding, site settings, and content preferences. Use this page to adapt the template for different teams or products.
+---
+
+## Overview
+
+Use this page to tailor the starter kit for your product, team, or internal documentation site. Karthick K is the example brand used throughout this template, and you can replace it with your own branding, copy, and defaults.
+
+The sections below cover the settings you are most likely to adjust first: brand styling, navigation, metadata, and deployment behavior. You can apply them gradually, or treat this page as a checklist before you publish.
+
+<Callout kind="info">
+
+This is sample documentation for a starter kit. You should customize every example to match your own product, naming, and release process.
+
+</Callout>
+
+<Columns cols={3}>
+  <Card title="Branding" icon="settings" href="#site-branding-and-theme-settings">
+    
+Update colors, logo usage, and tone to match your product identity.
+
+  </Card>
+  <Card title="Navigation" icon="book-open" href="#navigation-and-sidebar-setup">
+    
+Organize pages so readers can find the most important content quickly.
+
+  </Card>
+  <Card title="Deployment" icon="rocket" href="#environment-and-deployment-settings">
+    
+Set environment values and publish the site with confidence.
+
+  </Card>
+</Columns>
+
+## Site branding and theme settings
+
+Start by defining the visual identity of your documentation. A clear theme helps readers recognize your product and keeps the experience consistent across pages.
+
+For Karthick K, the sample brand color is `#5fed83`, which works well for accents, callouts, and active navigation states. You can also define the slogan, logo, and typography in the same configuration area.
+
+<Tabs>
+  <Tab title="Light theme" icon="sun">
+    
+Use a bright, high-contrast layout for general documentation reading.
+
+````javascript
+export const theme = {
+  brand: {
+    name: "Karthick K",
+    slogan: "The future of building happens together",
+    color: "#5fed83",
+  },
+  appearance: {
+    defaultTheme: "light",
+    accentColor: "#5fed83",
+    showLogo: true,
+  },
+};
+````
+
+  </Tab>
+  <Tab title="Dark theme" icon="moon">
+    
+Use a dark theme for teams that prefer lower eye strain or want a more modern interface.
+
+````javascript
+export const theme = {
+  brand: {
+    name: "Karthick K",
+    slogan: "The future of building happens together",
+    color: "#5fed83",
+  },
+  appearance: {
+    defaultTheme: "dark",
+    accentColor: "#5fed83",
+    showLogo: true,
+  },
+};
+````
+
+  </Tab>
+  <Tab title="System preference" icon="monitor">
+    
+Respect the user's device theme so the site follows their OS setting automatically.
+
+````javascript
+export const theme = {
+  brand: {
+    name: "Karthick K",
+    slogan: "The future of building happens together",
+    color: "#5fed83",
+  },
+  appearance: {
+    defaultTheme: "system",
+    accentColor: "#5fed83",
+    showLogo: true,
+  },
+};
+````
+
+  </Tab>
+</Tabs>
+
+### Recommended brand settings
+
+| Setting | Purpose | Example |
+| --- | --- | --- |
+| `name` | Displayed in the header and metadata | `Karthick K` |
+| `slogan` | Short supporting phrase for the brand | `The future of building happens together` |
+| `color` | Accent color used in UI elements | `#5fed83` |
+| `defaultTheme` | Controls the initial color mode | `light` |
+
+## Navigation and sidebar setup
+
+Your navigation should lead readers to the most common tasks first. Keep the top-level structure small, then group related content into sections that are easy to scan.
+
+A good sidebar mirrors how your users think, not how your internal teams are structured. For example, place quickstart material near the top, then move into configuration, guides, and reference content.
+
+<Steps>
+  <Step title="Define top-level sections" icon="book-open">
+    
+Choose a small set of categories such as Overview, Setup, Guides, and Reference.
+
+  </Step>
+  <Step title="Order pages by frequency" icon="arrow-right">
+    
+Place the most-used pages first so readers can reach them with fewer clicks.
+
+  </Step>
+  <Step title="Add labels and groups" icon="settings">
+    
+Use labels for clarity, and group related pages under a shared heading.
+
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JavaScript,JSON">
+  ```javascript
+  export const navigation = [
+    {
+      title: "Getting Started",
+      items: [
+        { title: "Introduction", href: "/introduction" },
+        { title: "Quickstart", href: "/quickstart" },
+      ],
+    },
+    {
+      title: "Configuration",
+      items: [
+        { title: "Branding", href: "/configuration#site-branding-and-theme-settings" },
+        { title: "Deployment", href: "/configuration#environment-and-deployment-settings" },
+      ],
+    },
+  ];
+  ```
+
+  ```json
+  {
+    "navigation": [
+      {
+        "title": "Getting Started",
+        "items": [
+          { "title": "Introduction", "href": "/introduction" },
+          { "title": "Quickstart", "href": "/quickstart" }
+        ]
+      },
+      {
+        "title": "Configuration",
+        "items": [
+          { "title": "Branding", "href": "/configuration#site-branding-and-theme-settings" },
+          { "title": "Deployment", "href": "/configuration#environment-and-deployment-settings" }
+        ]
+      }
+    ]
+  }
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+
+If your sidebar feels crowded, move rarely used pages into nested groups and keep only the essentials in the first view.
+
+</Callout>
+
+## Content defaults and metadata
+
+Metadata helps search engines and preview cards understand your site. It also gives your documentation a consistent baseline when individual pages do not provide every field.
+
+Set shared defaults for titles, descriptions, social images, and author information. You can override them on a per-page basis when a page needs unique metadata.
+
+<Expandable title="Suggested default metadata" default-open="false">
+
+Use a shared metadata object to reduce repetition and keep page output consistent.
+
+````javascript
+export const metadata = {
+  titleTemplate: "%s | Karthick K",
+  description:
+    "Welcome to Karthick K's documentation. This is your default documentation space where you can organize and manage all your project documentation.",
+  openGraphImage: "https://docs.example.com/images/og-default.png",
+  twitterCard: "summary_large_image",
+  language: "en",
+};
+````
+
+</Expandable>
+
+### Common metadata fields
+
+| Field | What it controls | Example value |
+| --- | --- | --- |
+| `titleTemplate` | How page titles appear in the browser | `%s | Karthick K` |
+| `description` | Search and social preview text | Starter kit description |
+| `openGraphImage` | Social share preview image | `https://docs.example.com/images/og-default.png` |
+| `language` | Default document language | `en` |
+
+## Environment and deployment settings
+
+You can use environment-specific configuration to keep local development, staging, and production aligned. This is especially useful when you want different API targets or analytics keys in each environment.
+
+Keep secrets out of source control. Use environment variables for values that differ between environments, and provide safe defaults where possible. Never commit real secrets into your repository.
+
+<Tabs>
+  <Tab title="Local development" icon="terminal">
+    
+Use local values while you build and test the site.
+
+````bash
+DOCS_SITE_URL=http://localhost:3000
+DOCS_API_URL=https://api.example.com
+DOCS_ENV=development
+````
+
+  </Tab>
+  <Tab title="Staging" icon="cloud">
+    
+Preview changes in a controlled environment before release.
+
+````bash
+DOCS_SITE_URL=https://staging.docs.example.com
+DOCS_API_URL=https://api.example.com
+DOCS_ENV=staging
+````
+
+  </Tab>
+  <Tab title="Production" icon="rocket">
+    
+Use stable public values for your live documentation site.
+
+````bash
+DOCS_SITE_URL=https://docs.example.com
+DOCS_API_URL=https://api.example.com
+DOCS_ENV=production
+````
+
+  </Tab>
+</Tabs>
+
+### Deployment checklist
+
+1. Verify that all links resolve correctly.
+2. Confirm that images load from approved domains.
+3. Review page metadata for title and description accuracy.
+4. Test the sidebar on mobile and desktop.
+5. Check that environment variables are present in your hosting platform.
+
+<Callout kind="alert">
+
+Before you publish, make sure your production site uses safe placeholder values for any optional integrations and never exposes private keys in client-side code.
+
+</Callout>
+
+## Next steps
+
+After you finish configuration, review the content structure and replace any starter kit copy with your own documentation. You can then expand the site with product-specific guides, FAQs, and release notes.
+
+<Columns cols={2}>
+  <Card title="Return to introduction" icon="arrow-right" href="/introduction" horizontal>
+    
+Review the starter kit overview and confirm the site structure.
+
+  </Card>
+  <Card title="Open quickstart" icon="book-open" href="/quickstart" horizontal>
+    
+Continue with installation and first-run setup.
+
+  </Card>
+</Columns>
